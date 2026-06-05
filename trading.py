@@ -20,6 +20,9 @@ warnings.filterwarnings("ignore")
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 app.title = "Trading Platform"
 
+# ─── ADD THIS EXACT LINE ───
+server = app.server  
+
 # ─── Watchlist symbols ────────────────────────────────────────────────────────
 WATCHLIST = [
     {"symbol": "^NSEI",      "label": "NIFTY",    "name": "Nifty 50 Index",    "exchange": "NSE"},
